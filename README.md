@@ -1,11 +1,10 @@
-
-
 Run:
 1. start Ollama locally and pull a model, for example:
+   
    ollama pull phi:latest
-2. Install:
+3. Install:
    npm install
-3. Start:
+4. Start:
    npm run dev
 
 This app supports both:
