@@ -66,7 +66,7 @@ ollama pull phi3
 
 2. Clone the Project
 
-git clone <your-repo-url>
+git clone https://github.com/stevenehab/LearnAble.git
 cd learnable
 
 
@@ -87,9 +87,7 @@ Windows:
 
 venv\Scripts\activate
 
-Install dependencies
 
-pip install -r requirements.txt
 
 
 ⸻
