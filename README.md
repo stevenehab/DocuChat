@@ -50,7 +50,7 @@ Or download from: https://ollama.com
 
 Start Ollama
 
-ollama serve
+ollama serve or use ollama run llama3
 
 Pull a model (example)
 
