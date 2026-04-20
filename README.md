@@ -1,211 +1,64 @@
-# LearnAble (Local AI Learning Assistant)
+Here’s a much simpler README — exactly what you asked for (no unnecessary steps, just run it):
 
-LearnAble is a local-first AI-powered learning application that helps users understand documents through summaries, flashcards, and chat — all running on local models via Ollama.
+⸻
 
-## Features
 
-- Upload and analyze documents
-- AI-generated summaries (adjustable reading levels)
-- Flashcard generation
-- Chat with your documents (RAG)
-- Podcast-style audio summaries
-- Accessibility features (font size, spacing, reading levels)
-- Fully local AI (no external API required)
+# LearnAble (Local AI Learning App)
 
-## Tech Stack
-
-### Frontend
-- Next.js
-- React
-- TypeScript
-
-### Backend
-- Python
-- FastAPI
-
-### AI / Local Models
-- Ollama
-- Embeddings + vector search (FAISS or similar)
-- Retrieval-Augmented Generation (RAG)  [oai_citation:0‡Week 2 Applications Survey & Review.docx.pdf](sediment://file_0000000053f071fdbeb6c8a0eb727915)
+LearnAble is a local AI-powered app that helps you understand documents using summaries, flashcards, and chat — all running on your computer with Ollama.
 
 ---
 
-## Prerequisites
+## Setup (Super Simple)
 
-Install the following:
+### 1. Install Ollama
+Download and install:
+https://ollama.com
 
-- Node.js (v18+)
-- Python (3.10+)
-- Ollama → https://ollama.com
+After installing, open a terminal and run:
 
----
-
-## 1. Install & Run Ollama
-
-### Install Ollama
 ```bash
-brew install ollama   # Mac
+ollama run llama3
 
-Or download from: https://ollama.com
-
-Start Ollama
-
-ollama serve or use ollama run llama3
-
-Pull a model (example)
-
-ollama pull llama3
-
-You can also use:
-
-ollama pull mistral
-ollama pull phi3
-
+(If it works, you’re done with Ollama)
 
 ⸻
 
-2. Clone the Project
+2. Install and Run the App
 
-git clone https://github.com/stevenehab/LearnAble.git
-cd learnable
-
-
-⸻
-
-3. Backend Setup
-
-cd backend
-python -m venv venv
-
-Activate venv
-
-Mac/Linux:
-
-source venv/bin/activate
-
-Windows:
-
-venv\Scripts\activate
-
-
-
-
-⸻
-
-4. Configure Environment Variables
-
-Create .env inside backend/
-
-Example:
-
-LLM_PROVIDER=ollama
-OLLAMA_MODEL=llama3
-EMBEDDING_MODEL=all-MiniLM-L6-v2
-CHUNK_SIZE=500
-
-
-⸻
-
-5. Run Backend
-
-uvicorn main:app --reload
-
-Backend runs on:
-
-http://127.0.0.1:8000
-
-
-⸻
-
-6. Frontend Setup
-
-Open a new terminal:
 npm install
-
-
-⸻
-
-7. Run Frontend
-
 npm run dev
 
-Frontend runs on:
+
+⸻
+
+3. Open the App
+
+Go to:
 
 http://localhost:3000
 
 
 ⸻
 
-How It Works
-	1.	Upload a document
-	2.	Backend splits it into chunks
-	3.	Chunks are converted into embeddings
-	4.	Stored in a vector database
-	5.	When you ask a question:
-	•	Relevant chunks are retrieved
-	•	Ollama generates an answer based on them
-
-This approach reduces hallucinations and ensures responses are grounded in your data  ￼.
+That’s it
+	•	Ollama runs the AI locally
+	•	The app runs with npm run dev
+	•	No API keys needed
+	•	No complicated setup
 
 ⸻
 
-Common Issues
+If Something Doesn’t Work
+	•	Make sure Ollama is running:
 
-Ollama not running
+ollama run llama3
 
-ollama serve
-
-Model not found
-
-ollama pull llama3
-
-Port already in use
-
-Kill process on port:
-
-lsof -i :8000
-kill -9 <PID>
-
-Backend not connecting to Ollama
-
-Make sure Ollama is running on:
-
-http://localhost:11434
-
-
-⸻
-
-Example Run (2 terminals)
-
-Terminal 1 (Backend)
-
-cd backend
-source venv/bin/activate
-uvicorn main:app --reload
-
-Terminal 2 (Frontend)
-
-cd frontend
-npm install
-npm run dev
-
-
-⸻
-
-Notes
-	•	Everything runs locally (privacy-first)
-	•	Performance depends on your machine (RAM + CPU/GPU)
-	•	No internet required after model download
+	•	If port error appears → Ollama is already running (this is fine)
 
 ⸻
 
 Authors
+	•	Steven Agayby
 	•	John Thomas
 	•	Aashray Rout
-	•	Steven Agayby
-
-⸻
-
-License
-
-Academic project (DS 440 – Penn State)
