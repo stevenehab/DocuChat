@@ -120,8 +120,6 @@ http://127.0.0.1:8000
 6. Frontend Setup
 
 Open a new terminal:
-
-cd frontend
 npm install
 
 
